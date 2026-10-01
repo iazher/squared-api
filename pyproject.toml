@@ -7,7 +7,9 @@ authors = [
     { name = "iazher", email = "imanazher00@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "fastapi[standard]>=0.142.2",
+]
 
 [project.scripts]
 squared-api = "squared_api:main"
