@@ -1,0 +1,703 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Alex Chen",
+      "email": "alex@example.com"
+    },
+    {
+      "id": "user-2",
+      "name": "Sam Rivera",
+      "email": "sam@example.com"
+    },
+    {
+      "id": "user-3",
+      "name": "Jordan Lee",
+      "email": "jordan@example.com"
+    },
+    {
+      "id": "user-4",
+      "name": "Morgan Blake",
+      "email": "morgan@example.com"
+    },
+    {
+      "id": "user-5",
+      "name": "Casey Nguyen",
+      "email": "casey@example.com"
+    },
+    {
+      "id": "user-6",
+      "name": "Riley Thompson",
+      "email": "riley@example.com"
+    },
+    {
+      "id": "user-7",
+      "name": "Avery Martinez",
+      "email": "avery@example.com"
+    },
+    {
+      "id": "user-8",
+      "name": "Drew Sullivan",
+      "email": "drew@example.com"
+    }
+  ],
+  "groups": [
+    {
+      "id": "group-1",
+      "name": "Trip to Lisbon",
+      "createdBy": "user-1",
+      "memberIDs": [
+        "user-1",
+        "user-2",
+        "user-3",
+        "user-4",
+        "user-5"
+      ],
+      "daysAgo": 10
+    },
+    {
+      "id": "group-2",
+      "name": "Apartment — SF",
+      "createdBy": "user-1",
+      "memberIDs": [
+        "user-1",
+        "user-2"
+      ],
+      "daysAgo": 20
+    },
+    {
+      "id": "group-3",
+      "name": "Ski Trip",
+      "createdBy": "user-1",
+      "memberIDs": [
+        "user-1",
+        "user-2",
+        "user-3",
+        "user-4",
+        "user-5",
+        "user-6",
+        "user-7",
+        "user-8"
+      ],
+      "daysAgo": 4
+    }
+  ],
+  "expenses": [
+    {
+      "id": "expense-1",
+      "groupID": "group-1",
+      "title": "Hotel",
+      "amount": 240.00,
+      "paidByUserID": "user-1",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 80.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 80.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 80.00
+        }
+      ],
+      "daysAgo": 9
+    },
+    {
+      "id": "expense-2",
+      "groupID": "group-1",
+      "title": "Dinner",
+      "amount": 96.00,
+      "paidByUserID": "user-2",
+      "splitMethod": "exact",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 40.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 36.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 20.00
+        }
+      ],
+      "daysAgo": 7
+    },
+    {
+      "id": "expense-3",
+      "groupID": "group-1",
+      "title": "Taxi",
+      "amount": 45.00,
+      "paidByUserID": "user-3",
+      "splitMethod": "percentage",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 22.50
+        },
+        {
+          "userID": "user-2",
+          "amount": 13.50
+        },
+        {
+          "userID": "user-3",
+          "amount": 9.00
+        }
+      ],
+      "daysAgo": 5
+    },
+    {
+      "id": "expense-4",
+      "groupID": "group-1",
+      "title": "Groceries",
+      "amount": 60.00,
+      "paidByUserID": "user-1",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 30.00
+        }
+      ],
+      "daysAgo": 2
+    },
+    {
+      "id": "expense-6",
+      "groupID": "group-1",
+      "title": "Museum Tickets",
+      "amount": 50.00,
+      "paidByUserID": "user-4",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 10.00
+        }
+      ],
+      "daysAgo": 1
+    },
+    {
+      "id": "expense-7",
+      "groupID": "group-1",
+      "title": "Breakfast",
+      "amount": 40.00,
+      "paidByUserID": "user-5",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 8.00
+        }
+      ],
+      "daysAgo": 3
+    },
+    {
+      "id": "expense-8",
+      "groupID": "group-1",
+      "title": "Train Tickets",
+      "amount": 150.00,
+      "paidByUserID": "user-1",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 30.00
+        }
+      ],
+      "daysAgo": 6
+    },
+    {
+      "id": "expense-9",
+      "groupID": "group-1",
+      "title": "Souvenirs",
+      "amount": 75.00,
+      "paidByUserID": "user-2",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 15.00
+        }
+      ],
+      "daysAgo": 8
+    },
+    {
+      "id": "expense-10",
+      "groupID": "group-1",
+      "title": "Airport Transfer",
+      "amount": 100.00,
+      "paidByUserID": "user-3",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 20.00
+        }
+      ],
+      "daysAgo": 11
+    },
+    {
+      "id": "expense-5",
+      "groupID": "group-2",
+      "title": "Wifi Bill",
+      "amount": 90.00,
+      "paidByUserID": "user-2",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 45.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 45.00
+        }
+      ],
+      "daysAgo": 3
+    },
+    {
+      "id": "expense-11",
+      "groupID": "group-3",
+      "title": "Chalet Rental",
+      "amount": 160.00,
+      "paidByUserID": "user-1",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 20.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 20.00
+        }
+      ],
+      "daysAgo": 4
+    },
+    {
+      "id": "expense-12",
+      "groupID": "group-3",
+      "title": "Lift Passes",
+      "amount": 80.00,
+      "paidByUserID": "user-2",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 10.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 10.00
+        }
+      ],
+      "daysAgo": 3.5
+    },
+    {
+      "id": "expense-13",
+      "groupID": "group-3",
+      "title": "Ski Rentals",
+      "amount": 240.00,
+      "paidByUserID": "user-3",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 30.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 30.00
+        }
+      ],
+      "daysAgo": 3
+    },
+    {
+      "id": "expense-14",
+      "groupID": "group-3",
+      "title": "Groceries",
+      "amount": 56.00,
+      "paidByUserID": "user-4",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 7.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 7.00
+        }
+      ],
+      "daysAgo": 2.5
+    },
+    {
+      "id": "expense-15",
+      "groupID": "group-3",
+      "title": "Dinner Out",
+      "amount": 120.00,
+      "paidByUserID": "user-5",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 15.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 15.00
+        }
+      ],
+      "daysAgo": 2
+    },
+    {
+      "id": "expense-16",
+      "groupID": "group-3",
+      "title": "Hot Tub Rental",
+      "amount": 88.00,
+      "paidByUserID": "user-6",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 11.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 11.00
+        }
+      ],
+      "daysAgo": 1.5
+    },
+    {
+      "id": "expense-17",
+      "groupID": "group-3",
+      "title": "Gas",
+      "amount": 64.00,
+      "paidByUserID": "user-7",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 8.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 8.00
+        }
+      ],
+      "daysAgo": 1
+    },
+    {
+      "id": "expense-18",
+      "groupID": "group-3",
+      "title": "Lodge Dinner",
+      "amount": 200.00,
+      "paidByUserID": "user-8",
+      "splitMethod": "equal",
+      "splits": [
+        {
+          "userID": "user-1",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-2",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-3",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-4",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-5",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-6",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-7",
+          "amount": 25.00
+        },
+        {
+          "userID": "user-8",
+          "amount": 25.00
+        }
+      ],
+      "daysAgo": 0.5
+    }
+  ],
+  "settlements": [
+    {
+      "id": "settlement-1",
+      "groupID": "group-1",
+      "fromUserID": "user-2",
+      "toUserID": "user-1",
+      "amount": 70.00,
+      "daysAgo": 1
+    }
+  ]
+}
