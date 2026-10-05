@@ -12,7 +12,8 @@ class User(Base):
 
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     name: Mapped[str] = mapped_column(String(100))
-    email: Mapped[str | None] = mapped_column(String(320))
+    email: Mapped[str | None] = mapped_column(String(320), unique=True) 
+    password_hash: Mapped[str | None] = mapped_column(String(255))
     apple_sub: Mapped[str | None] = mapped_column(String(255), unique=True)
     avatar_url: Mapped[str | None] = mapped_column(String(2048))
     venmo_username: Mapped[str | None] = mapped_column(String(100))
@@ -26,3 +27,5 @@ class User(Base):
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
+   
+    

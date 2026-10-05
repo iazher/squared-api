@@ -18,6 +18,7 @@ from sqlalchemy import delete
 from sqlalchemy.engine import make_url
 
 from squared_api.config import settings
+from squared_api.security import hash_password
 from squared_api.database import SessionLocal, engine
 from squared_api.models import (
     Expense,
@@ -30,6 +31,9 @@ from squared_api.models import (
 )
 
 DATA_FILE = Path(__file__).parent / "seed_data.json"
+
+# Every seeded account can sign in with this password. Local development only.
+SEED_PASSWORD = "squared-dev-password"
 
 # Any fixed UUID works here. Combined with a mock ID like "user-1", it always
 # produces the same UUID, so IDs stay stable every time you re-seed.
@@ -57,8 +61,16 @@ async def seed() -> None:
         for model in (ExpenseSplit, Expense, Settlement, GroupMember, Group, User):
             await session.execute(delete(model))
 
+        seed_hash = hash_password(SEED_PASSWORD)  # hashing is slow on purpose, so do it once
         for u in data["users"]:
-            session.add(User(id=stable_id(u["id"]), name=u["name"], email=u["email"]))
+            session.add(
+                User(
+                    id=stable_id(u["id"]),
+                    name=u["name"],
+                    email=u["email"],
+                    password_hash=seed_hash,
+                )
+            )
         await session.flush()  # send the users to the database now, so groups can point at them
 
         for g in data["groups"]:

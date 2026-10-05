@@ -2,10 +2,25 @@ import uuid
 from datetime import datetime, timedelta, timezone
 
 import jwt
+from pwdlib import PasswordHash
 
 from squared_api.config import settings
 
 ALGORITHM = "HS256"
+
+password_hasher = PasswordHash.recommended()
+
+# Used when an email doesn't exist, so a failed sign-in takes the same time
+# whether or not the account exists (see sign_in in routers/auth.py).
+DUMMY_HASH = password_hasher.hash("not-a-real-password")
+
+
+def hash_password(password: str) -> str:
+    return password_hasher.hash(password)
+
+
+def verify_password(password: str, password_hash: str) -> bool:
+    return password_hasher.verify(password, password_hash)
 
 
 def create_access_token(user_id: uuid.UUID) -> str:
