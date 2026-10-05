@@ -8,6 +8,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from squared_api.database import get_session
 
+from squared_api.routers import auth
+
 app = FastAPI(title="Squared API")
 
 # creates server object. Everything gets attached to this app
@@ -19,3 +21,5 @@ async def health(
 ) -> dict[str, str]:
     await session.execute(text("SELECT 1"))
     return {"status": "ok", "database": "ok"}
+
+app.include_router(auth.router)
